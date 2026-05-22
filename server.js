@@ -313,8 +313,6 @@ app.get('/api/health', (req, res) => {
     version: '1.0.0',
     virusTotalConfigured:   !!process.env.VIRUSTOTAL_API_KEY && process.env.VIRUSTOTAL_API_KEY !== 'your_virustotal_api_key_here',
     safeBrowsingConfigured: !!process.env.GOOGLE_SAFE_BROWSING_API_KEY && process.env.GOOGLE_SAFE_BROWSING_API_KEY !== 'your_google_safe_browsing_api_key_here',
-    vtKeyLength:  process.env.VIRUSTOTAL_API_KEY ? process.env.VIRUSTOTAL_API_KEY.length : 0,
-    sbKeyLength:  process.env.GOOGLE_SAFE_BROWSING_API_KEY ? process.env.GOOGLE_SAFE_BROWSING_API_KEY.length : 0,
     timestamp: new Date().toISOString()
   });
 });
