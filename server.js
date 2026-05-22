@@ -18,6 +18,7 @@ const rateLimit   = require('express-rate-limit');
 const { URL }     = require('url');
 
 const app  = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3001;
 
 // ─── Middleware ────────────────────────────────────────────────────────────────
